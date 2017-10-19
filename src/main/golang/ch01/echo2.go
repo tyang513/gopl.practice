@@ -1,4 +1,4 @@
-package ch01
+package main
 
 import (
 	"fmt"
@@ -8,9 +8,10 @@ import (
 func main() {
 	var s = ""
 	var sep = ""
-	for _, arg := range os.Args[1:] {
+	for a, arg := range os.Args[1:] {
 		s += sep + arg
 		sep = " "
+		fmt.Println(a)
 	}
 	fmt.Println(s)
 }
